@@ -54,5 +54,5 @@ r
 "Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud."
 --сеть была, не было файлового хранилища
 образ диска- сделал на диске из свежесозданного образа
-![виртмашина]]
+![виртмашина]
 (https://github.com/Romanru5116/devops-netology/blob/3fba18d710e7192404a06fcb40c2dfc8fbdbc219/VirtualMachine.png)
