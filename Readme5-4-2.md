@@ -72,15 +72,15 @@ ansible all --list-hosts -i inventory
 
 проверяем что ansible работает
 ansible all -i inventory -m ping
-[!](
+[ping](https://github.com/Romanru5116/devops-netology/blob/14aaf83e33262ca0bcc445666acaf38458523834/ping.png)
 ++ теперь на пользу:
 ansible playbook provisioning.yml i- inventory
 ++ результат не тот
 E
-[!](https://github.com/Romanru5116/devops-netology/blob/680290beef9fa002dfd56c8fc25ad4b475a53cf8/ErrorPlay.png))
+[Erroryum](https://github.com/Romanru5116/devops-netology/blob/680290beef9fa002dfd56c8fc25ad4b475a53cf8/ErrorPlay.png)
 ++ 
 надо переделывать под centos
 виртуалку 24.10.23:30 пока здесь остановился
-[!][(https://newCentos.png)]
+[NewCentos](https://github.com/Romanru5116/devops-netology/blob/0b60bfb70ed5b11aaf4c6576d16934b9e3b6df8e/newCentos.png)
 
 
