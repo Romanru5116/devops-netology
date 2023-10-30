@@ -53,8 +53,7 @@ r
 * Задача2
 "Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud."
 
-![виртмашина]
-(https://github.com/Romanru5116/devops-netology/blob/3fba18d710e7192404a06fcb40c2dfc8fbdbc219/VirtualMachine.png)
+![виртмашина](https://github.com/Romanru5116/devops-netology/blob/3fba18d710e7192404a06fcb40c2dfc8fbdbc219/VirtualMachine.png)
 
 * ЗАДАЧА 3.1
  + создаем вирт машину из консоли взяли собственный образ DEBIAN - не описываю там все просто
@@ -74,7 +73,7 @@ ansible all -i inventory -m ping
 ansible-playbook provisionin.yml -i inventory
 ++ результат не тот
 
-[Error](https://github.com/Romanru5116/devops-netology/blob/680290beef9fa002dfd56c8fc25ad4b475a53cf8/ErrorPlay.png)
+![Error](https://github.com/Romanru5116/devops-netology/blob/680290beef9fa002dfd56c8fc25ad4b475a53cf8/ErrorPlay.png)
 ++ 
 + надо переделывать под centos
 виртуалку 24.10.23:30 пока здесь остановился
@@ -87,7 +86,7 @@ ansible-playbook provisionin.yml -i inventory
 ++ запускаем playbook - та же ошибка
 гуглим и меняем строку запуска вот с этим: ansible-playbook -e ansible_python_interpreter=/usr/bin/python2
 
-![питон надо развернутьудаленно сервере](/home/rrm/devops-netology/Img/errorpython.png)
+![питон надо развернутьудаленно сервере](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/errorpython.png)
   -заходим на сервер
 смотрим версию python  --version
 версия 2.7.5
@@ -101,7 +100,7 @@ ansible-playbook provisionin.yml -i inventory
 + заново запускаем ansible
 
 + ошибка в задаче 2
-![ScrERRTask2.png](/home/rrm/devops-netology/Img/ScrERRTask2.png)
+![ScrERRTask2.png](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/ScrERRTask2.png)
 
 + сначала ставим сборку
 sudo yum install libselinux-python3
@@ -114,22 +113,23 @@ sudo yum install bind-utils
 + 27.10 00:40 вновь на исполнение
 плейбук
 ошибка errorTools Installed
-![errortools](/home/rrm/devops-netology/Img/errortaskInstalling.png)
+![errortools](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/errortaskInstalling.png)
 
+*РЕЗУЛЬТАТ 3.1: НЕУСПЕШНО НА ЭТАПЕ ИСПОЛНЕНИЯ ПЛЕйБУКА (ШАГ развертывания DOCKER_COMPOSE)
 
 +29.10 
-+ "ручками создаем STACK и поддиректории"
 * ЗАДАЧА 3.2
++ "ручками создаем STACK и поддиректории"
  + повторяем вышеописанные процедуры
 приходим к успешному выполнению задач кроме единственной
 
- + ![timeout](/home/rrm/devops-netology/Img/prompt.png)
+ + ![timeout](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/prompt.png)
  + ИНТЕРНЕТ говорит что надо лечить правкой ansible.cfg - правим:
-timeout=60
+**timeout=60**
 
  + запускаем заново
  + ошибка:
-![Питон2нужен](/home/rrm/devops-netology/Img/python2needed.png)
+![Питон2нужен](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/python2needed.png)
  + пробуем поставить версию2
 sudo add-apt-repository universe
 sudo apt update
@@ -146,17 +146,17 @@ Python 2.7.18
 
 + опять запускаем ansible
 выполнение успешно, результат
-![ansibleok](/home/rrm/devops-netology/Img/screenWorkok.png)
+![ansibleok](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/screenWorkok.png)
 
 
-* РЕЗУЛЬТАТ
-![вирт машина](/home/rrm/devops-netology/Img/Virtual1.png)
-![вирт машина](/home/rrm/devops-netology/Img/Virtual2.png)
-![docker ps](/home/rrm/devops-netology/Img/docker_ps.png)
+* РЕЗУЛЬТАТ 3.2: ЛОКАЛЬНО ВСЕ РАЗВЕРНУТО И РАБОТАЕТ
+![вирт машина](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/Virtual1.png)
+![вирт машина](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/Virtual2.png)
+![docker ps](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/docker_ps.png))
 
 * ЗАДАЧА4
  + 1.Откройте веб-браузер: - вот так
-![NotReach](/home/rrm/devops-netology/Img/NotReach.png)
+![NotReach](https://github.com/Romanru5116/devops-netology/blob/ebb8deb001ae75b1060286022bc120dbca442aa8/NotReach.png)
 
  + Диагностика:
   - на удаленном пытаемся развернуть chrome
@@ -164,11 +164,11 @@ Python 2.7.18
  - ставим telnet
  - локально: telnet connect to address 127.0.0.1: Connection refused
  - проверяем как прокинут порт графаны из контейнера
- _видно что контейнер grafana слушает TCP порт 3000 
+   Видно что контейнер grafana слушает TCP порт 3000 
  задан вопрос в общую чатку около задачи- его как то надо прокинуть в контейнер? В каком конфиге править?_
 
  
 Дополнительно по docker logs вижу что ошибки есть контейнеров:
 "Есть ошибки по caddy 2023/10/29 19:56:19 loading Caddyfile via flag: open /etc/caddy/Caddyfile: no such file or directory"
-
+ * РЕЗУЛЬТАТ ЗАДАЧА4: ПОИСК КУДА ДВИГАТЬСЯ ДАЛЬШЕ (ПРОКИДЫВАНИЕ ПОРТА+ ЛЕЧЕНИЕ ОШИБОК В ЛОГАХ КОНТЕЙНЕРОВ)
 
